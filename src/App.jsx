@@ -1,12 +1,20 @@
+/** @format */
 
-import React from 'react'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./Page";
+import { NavComponent } from "./components";
 
 const App = () => {
-  return (
-    <div>
-      App
-    </div>
-  )
-}
+	return (
+		<div className="w-full mx-auto ">
+			<NavComponent />
 
-export default App
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+			</Routes>
+		</div>
+	);
+};
+
+export default App;
